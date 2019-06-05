@@ -4,7 +4,7 @@
   "description": "Application electron",
   "main": "index.js",
   "scripts": {
-    "dev": "electron index.js",
+    "dev": "cross-env NODE_ENV=development electron src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/afisaacs/jselectron#readme",
   "dependencies": {
-    "electron": "^5.0.2"
+    "cross-env": "^5.2.0",
+    "electron-compile": "^6.4.4"
+  },
+  "devDependencies": {
+    "electron-compilers": "^5.9.0",
+    "electron-prebuilt-compile": "^4.0.0"
   }
 }

@@ -1,6 +1,12 @@
 'use strict'
 
-const { app, BrowserWindow } = require('electron')
+import { app, BrowserWindow } from 'electron'
+import devtools from './devtools'
+
+//Validar si estamos en el entorno de desarrollo
+if(process.env.NODE_ENV === 'development') {
+  devtools()
+}
 
 //Imprimiendo un mensaje en consola antes de salir
 app.on('before-quit', () => {
@@ -19,7 +25,7 @@ app.on('ready', () => {
     show: false,
   })
 
-  //
+  //Esperar a que el contenido esté listo para mostrar
   win.once('ready-to-show', () => {
     win.show();
   })
@@ -38,6 +44,8 @@ app.on('ready', () => {
 
   // win.loadURL('https://app.giitic.com/m/app')
   // win.loadURL('https://app.giitic.com')
-  win.loadURL('https://devdocs.io/')
+  // win.loadURL('https://devdocs.io/')
+  // win.loadURL(`file://${__dirname}/dist/index.html`)
+  win.loadURL(`file://${__dirname}/renderer/index.html`)
 
 })
