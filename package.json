@@ -1,0 +1,23 @@
+{
+  "name": "jselectron",
+  "version": "1.0.0",
+  "description": "Application electron",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afisaacs/jselectron.git"
+  },
+  "author": "Aaron Isaacs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afisaacs/jselectron/issues"
+  },
+  "homepage": "https://github.com/afisaacs/jselectron#readme",
+  "dependencies": {
+    "electron": "^5.0.2"
+  }
+}
