@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development electron src/index.js",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,10 +21,14 @@
   "homepage": "https://github.com/afisaacs/jselectron#readme",
   "dependencies": {
     "cross-env": "^5.2.0",
-    "electron-compile": "^6.4.4"
+    "electron-compile": "^6.4.4",
+    "electron-debug": "^3.0.0"
   },
   "devDependencies": {
+    "devtron": "^1.4.0",
     "electron-compilers": "^5.9.0",
-    "electron-prebuilt-compile": "^4.0.0"
+    "electron-prebuilt-compile": "^4.0.0",
+    "electron-react-devtools": "^0.5.3",
+    "standard": "^12.0.1"
   }
 }
