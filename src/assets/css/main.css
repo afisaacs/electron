@@ -1,3 +1,137 @@
-body {
-  background: blue;
+/* color picker */
+
+:root {
+  --blue-grey-ligth-5: #eceff1;
+  --blue-grey-ligth-2: #90a4ae;
+  --bluegray: #607d8b;
+  --blue-grey-dark-2: #455a64;
+  --blue-grey-dark-4: #263238;
+  --blue-grey-dark-4: #263238;
+  --blue-grey-dark-6: #171e22;
+  
+  --red-dark-4: #d71526;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label, .materialize-textarea:focus:not([readonly])+label {
+  color: var(--blue-grey-dark-4) !important;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid var(--blue-grey-dark-4) !important;
+  box-shadow: 0 1px 0 0 var(--blue-grey-dark-4) !important;
+}
+
+.input-field .prefix.active {
+  color: var(--blue-grey-dark-4) !important;
+}
+
+.input-field .prefix {
+  color: var(--blue-grey-ligth-2) !important;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: 30px 1fr 50px / 300px 1fr;
+}
+
+.main-bar {
+  grid-column: span 2;
+}
+
+.menu-left {
+  background-color: var(--blue-grey-ligth-5);
+  padding: 5px 5px 2px;
+  box-sizing: border-box;
+}
+
+.menu-footer {
+  grid-column: span 2;
+}
+
+.main-bar {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: auto 1fr 160px;
+  padding: 0 0 0 10px;
+  grid-gap: 20px;
+  background-color: var(--blue-grey-dark-4);
+}
+
+.main-bar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-bar-image {
+  margin: 0;
+}
+
+.main-bar-image img {
+  width: 20px;
+}
+
+.main-bar-logo-title {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  letter-spacing: -.2px;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.user-image {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+}
+
+.user-image img {
+  width: 100%;
+}
+
+.main-bar-now {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  letter-spacing: -.2px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-bar-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  color: white;
+  letter-spacing: -.2px;
+  font-weight: normal;
+}
+
+.main-bar-tools i{
+  font-size: 16px;
+  cursor: default;
+}
+
+.main-bar-tools div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-bar-tools div:hover {
+  background-color: var(--blue-grey-dark-6);
+}
+
+.tool-close:hover {
+  background-color: var(--red-dark-4) !important;
 }

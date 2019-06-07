@@ -22,19 +22,15 @@ app.on('ready', () => {
     title: 'Hello world',
     center: true,
     maximizable: true,
-    show: false
+    show: false,
+    frame: false
   })
 
   // Esperar a que el contenido esté listo para mostrar
   win.once('ready-to-show', () => {
     win.maximize()
+    win.setMenuBarVisibility(false)
     win.show()
-  })
-
-  // Detectando el movimiento de la ventana
-  win.on('move', () => {
-    const position = win.getPosition()
-    console.log(`La posisión de la ventana es ${position}`)
   })
 
   // Detectando el cierre de la ventana para cerrar el aplicativo
@@ -42,10 +38,6 @@ app.on('ready', () => {
     win = null
     app.quit()
   })
-
-  // win.loadURL('https://app.giitic.com/m/app')
-  // win.loadURL('https://app.giitic.com')
-  // win.loadURL('https://devdocs.io/')
-  // win.loadURL(`file://${__dirname}/dist/index.html`)
+  
   win.loadURL(`file://${__dirname}/renderer/index.html`)
 })

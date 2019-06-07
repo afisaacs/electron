@@ -1,17 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hello World</title>
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <script src="frontend.js" type="text/javascript" charset="utf-8" async defer></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../assets/css/main.css" />
 </head>
+
 <body>
-  <div>
-    <p>Hello, I'm an electron application</p>
-    <p id="mensaje">Este es un mensaje enviado desde JavaScript</p>
+  <div class="main">
+    <div class="main-bar">
+      <div class="main-bar-logo">
+        <figure class="main-bar-image">
+          <img src="../assets/img/favicon/favicon-32x32.png">
+        </figure>
+        <span class="main-bar-logo-title">
+          Isaacs Pics Code
+        </span>
+      </div>
+      <span class="main-bar-now">actual.jpg</span>
+      <div class="main-bar-tools">
+        <div class="tool-min">
+          <i class="material-icons">remove</i>
+        </div>
+        <div class="tool-max">
+          <i class="material-icons">crop_square</i>
+        </div>
+        <div class="tool-close">
+          <i class="material-icons">close</i>
+        </div>
+      </div>
+    </div>
+    <div class="menu-left">
+      <div class="input-field">
+        <i class="material-icons prefix">search</i>
+        <input id="search" type="text">
+        <label for="search">Search</label>
+      </div>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+            Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle">folder</i>
+          <span class="title">Title</span>
+          <p>First Line <br>
+            Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle green">insert_chart</i>
+          <span class="title">Title</span>
+          <p>First Line <br>
+            Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle red">play_arrow</i>
+          <span class="title">Title</span>
+          <p>First Line <br>
+            Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-content">
+    </div>
+    <div class="menu-footer">
+
+    </div>
   </div>
+  <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
 </body>
+
 </html>
